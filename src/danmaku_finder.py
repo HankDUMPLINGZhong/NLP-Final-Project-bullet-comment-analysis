@@ -36,7 +36,7 @@ def get_danmaku(cid):
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
         "Referer": "https://www.bilibili.com/",
         "Origin": "https://www.bilibili.com",
-        "Cookie": "buvid3=94F4CE13-30F1-42FC-2AB5-D7DD3B44D83323162infoc; b_nut=1717896923; _uuid=D28894D8-AAE6-59F3-859F-610DCDC952F9323251infoc; enable_web_push=DISABLE; buvid4=AA06F2DC-B0C7-B8E9-0586-CB3BFD342D9324242-024060901-sihQ5DQWPT8v0HKARBd0mg%3D%3D; DedeUserID=35233437; DedeUserID__ckMd5=b47233f1e3129f48; header_theme_version=CLOSE; rpdid=|(k|RllmkRmk0J'u~u~)mYml~; buvid_fp_plain=undefined; LIVE_BUVID=AUTO5517278895494483; is-2022-channel=1; CURRENT_QUALITY=116; PVID=2; enable_feed_channel=DISABLE; fingerprint=dd1d5f4e3e91ce99dab07ea9fe9e02f7; bili_ticket=eyJhbGciOiJIUzI1NiIsImtpZCI6InMwMyIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzg2ODgzMjIsImlhdCI6MTczODQyOTA2MiwicGx0IjotMX0.iRixb5dcFPevbmTmJVPJvbfNwU47xfp79kdsmZPIMeA; bili_ticket_expires=1738688262; home_feed_column=5; browser_resolution=1528-738; buvid_fp=dd1d5f4e3e91ce99dab07ea9fe9e02f7; SESSDATA=45d5ac72%2C1754098600%2C72414%2A21CjDgdOLZYxRyTlml0jbWJ1dkRkD3jd589nBdo2zMhMb3r553Do9yqnV5i_9dkdD8HrISVmp1NnVjR0JMZk5NdUFfamVGUV9Za2JUbU1WTlhzT1RMQ3pfbHI0MzBSMzJWN0dGYzdXSndmc3ktOE9ZWXlubmpYUmJWVF8wbnB1OXZ6aFF5b3JJMmR3IIEC; bili_jct=f976850fea3cd703e5426e19a4bd95e3; b_lsid=104FC257C_194CCA17D4E; bsource=search_google; sid=6j4ekz80; bp_t_offset_35233437=1029769338938195968; CURRENT_FNVAL=2000"
+        "Cookie": MY_COOKIE
     }
     url = f"https://comment.bilibili.com/{cid}.xml"
     
