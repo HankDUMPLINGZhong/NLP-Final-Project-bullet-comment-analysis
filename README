@@ -1,0 +1,37 @@
+Code for Final Project NLP: Analysis of bullet comments
+Author: Hank Zhong
+
+NOTICE: to use this code, please fill in your api keys in utils.py.
+This package needs a cookie to extract bullet comments from Bilibili. To be able to extract bullet comments, you need to have a Bilibili account. After logged in, go into console mode and get you cookies. Then, fill you cookies in the MY_COOKIE variable in utils.py.
+
+File Structure
+- data
+    -bvid.txt: a list of videos' bvids to be processed
+    -combined_danmaku.csv: sheet of combined unique bullet comment
+    -meme_collection_01~89.json: 90 chunks of features extracted from bullet comments
+    -meme_collection_merged.json: final merged feature JSON file with repetitive features removed
+- generated_bullet_comments: list of generated bullet comments for each video
+- gpt2-danmaku-jieba: model and tokenizer for experiment 1
+- individual_bullet_comment: a copy of extracted bullet comments, by video, to be processed
+- output: a list of extracted bullet comments
+- src
+    - comment_comparer: methods for attempts of similarity evaluation metrics (though, as pointed out in the report, not statistically significant)
+    - danmaku_finder: the tool for extracting bullet comments from bilibili
+    - danmaku_generator: model training and generating for experiment 1
+    - integrater: merge separate bullet chat files into a single csv file
+    - meme_detecter: the tool for experiment 2 to detect features (including but not limited to memes) and save them as JSON files
+    - utils: manages api keys and cookies
+
+Steps to run both experiments:
+NOTICE: you could directly use the trained model in gpt2-danmaku-jieba for experiment 1 and meme_collection_merged.json in the data folder for experiment 2. If you want to replicate the result, please take the following steps to run the experiments.
+1. enter the bvids of videos you wish to extract in bvid.txt located in the data folder
+2. run danmaku_finder.py, you should have separate txt files in the output folder, each one corresponding to one video you designated
+3. run integrater.py, you should have a file called combined_danmaku.csv stored in the data folder (already existent but can be covered by running the code)
+For experiment 1:
+run danmaku_generator.ipynb to train the model, if you wish to load the model, locate the code where # load model note is and start running from there
+For experiment 2:
+separate files are already provided. If you wish to re-collect the features, run analyze_language_feature() method, it will automatically generate 90 JSON files representing 90 chunks of features. Then, run merge_meme_json() method will give you the merged JSON file. All files mentioned are currently present in the data folder and are readily for use.
+Running meme_detecter.py with current state directly will give you chance to test with generating bullet comments with desginated categories and video names. If you wish to directly examine the test outputs for sample videos, they can be found in generated_bullet_comments folder.
+
+If you have any questions or any unexpected error occurs, please contact Hank Zhong at hanquan@uchicago.edu .
+Thank you for using this package.
