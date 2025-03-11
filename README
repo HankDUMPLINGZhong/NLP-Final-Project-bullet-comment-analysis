@@ -11,7 +11,6 @@ File Structure
     -meme_collection_01~89.json: 90 chunks of features extracted from bullet comments
     -meme_collection_merged.json: final merged feature JSON file with repetitive features removed
 - generated_bullet_comments: list of generated bullet comments for each video
-- gpt2-danmaku-jieba: model and tokenizer for experiment 1
 - individual_bullet_comment: a copy of extracted bullet comments, by video, to be processed
 - output: a list of extracted bullet comments
 - src
@@ -23,7 +22,7 @@ File Structure
     - utils: manages api keys and cookies
 
 Steps to run both experiments:
-NOTICE: you could directly use the trained model in gpt2-danmaku-jieba for experiment 1 and meme_collection_merged.json in the data folder for experiment 2. If you want to replicate the result, please take the following steps to run the experiments.
+NOTICE: you could directly use meme_collection_merged.json in the data folder for experiment 2. Due to the file size limit for git repo, you need to re-run experiment 1 to get the model. If you want to replicate the result, please take the following steps to run the experiments.
 1. enter the bvids of videos you wish to extract in bvid.txt located in the data folder
 2. run danmaku_finder.py, you should have separate txt files in the output folder, each one corresponding to one video you designated
 3. run integrater.py, you should have a file called combined_danmaku.csv stored in the data folder (already existent but can be covered by running the code)
